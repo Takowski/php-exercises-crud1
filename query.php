@@ -62,7 +62,22 @@ function DisplayAllCustomerWithCard(){
     }
     echo "</table>";
 }
-
-
-
+// Display all show with artist date and hour, order by title
+// display it like this: Spectacle by artist, date at hour
+function DisplayAllShowWithArtistDateHour(){
+    require 'connect.php';
+    $query=$pdo->query('SELECT * FROM shows ORDER BY title');
+    $shows=$query->fetchAll();
+    echo "<table>";
+    echo "<tr><th>Title</th><th>Artist</th><th>Date</th><th>Hour</th></tr>";
+    foreach ($shows as $show){
+        echo "<tr>";
+        echo "<td>".$show['title']."</td>";
+        echo "<td>".$show['performer']."</td>";
+        echo "<td>".$show['date']."</td>";
+        echo "<td>".$show['startTime']."</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+}
 ?>

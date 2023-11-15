@@ -27,5 +27,12 @@ include 'query.php';
         <p><?php DisplayAllCustomerWithCard(); ?></p>
         <hr>
         <h2>Exercice 5</h2>
+        <h3>Afficher le titre de tous les spectacles ainsi que l'artiste, la date et l'heure. Trier les titres par ordre alphabétique. Afficher les résultat comme ceci : Spectacle par artiste, le date à heure.</h3>
+        <p><?php DisplayAllShowWithArtistDateHour(); ?></p>
+        <hr>
+        <h2>Exercice 6</h2>
+        
+
+
     </body>
 </html>
